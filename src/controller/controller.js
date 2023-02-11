@@ -36,7 +36,7 @@ const createQuestions=async (req,res) =>{
       
       let files = req.files;
     
-      if(req.files.length){
+      if(files){
           let uploadFileUrl = await aws_config.uploadFile(files[0]);
           data.media = uploadFileUrl;
       }
