@@ -36,7 +36,7 @@ const loginAdmin= async function(req,res){
                 userId: checkCred._id.toString(),
                 }, "ADMIN");
                 //Sending token in response body
-                res.status(201).send({message:'You Successfully LoggedIn',data: token})
+                res.status(201).send({message:'You are Successfully LoggedIn',data: token})
                 }catch(err) {
                 res.status(500).send({ message:'Sorry, for the inconvenience caused', msg: err.message });                
                 }
